@@ -1,0 +1,2218 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="screen-orientation" content="portrait"/>
+		<title>
+			Yondai!
+		</title>
+		<script src="https://connect.facebook.net/en_US/fbinstant.6.2.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<style>
+		html {
+			background:white;
+			overflow:hidden;
+			outline:none !important;
+		}
+		div {
+			outline:none !important;
+		}
+		button {
+			outline:none !important;
+		}
+
+			/* width */
+				::-webkit-scrollbar {
+				  width: 3px;
+				}
+
+				/* Track */
+				::-webkit-scrollbar-track {
+				  background: none; 
+				}
+				 
+				/* Handle */
+				::-webkit-scrollbar-thumb {
+				  background: white; 
+				}
+
+				/* Handle on hover */
+				::-webkit-scrollbar-thumb:hover {
+				  background: #555; 
+				}
+			
+			@keyframes come {
+				0% {transform:rotate(-20deg);}
+				50% {top:40%;}
+				100% {top:100%;}
+			}
+			@keyframes comee {
+				0% {transform:rotate(20deg);}
+				50% {top:60%;}
+				100% {top:100%;}
+			}
+			@keyframes light {
+				0% {opacity:0;}
+				50% {opacity:1;}
+				100% {opacity:0;}
+			}
+			@keyframes lightt {
+				0% {opacity:0;}
+				50% {opacity:1;}
+				100% {opacity:0;}
+			}
+			@keyframes go_down {
+				0% {opacity:0;transform: translateY(-10%);}
+				100% {opacity:1;transform: rotate(-10deg) skew(-3deg, 0deg);padding-top: 20%;}
+			}
+			@keyframes go_down2 {
+				0% {opacity:0;transform: translateY(-10%);}
+				100% {opacity:1;transform: rotate(-20deg) skew(5deg, 9deg);}
+			}
+			@keyframes slide_horizontal {
+				0% {opacity:0;top:40%;}
+				85% {opacity:1;}
+				95% {left:-10%;}
+				100% {left:-20%;top:50%;}
+			}
+			@keyframes slide_horizontall {
+				0% {opacity:1;top:60%;}
+				85% {opacity:1;}
+				95% {left:10%;}
+				100% {left:0%;top:50%;}
+			}
+			@keyframes updown {
+				0% {top:100%;left:10%;}
+				95% {top:50%;}
+				100% {top:100%;}
+			}
+			@keyframes updownn {
+				0% {top:100%;left:10%;}
+				95% {top:50%;}
+				100% {top:100%;left:40%;}
+			}
+			@keyframes sharingan {
+				00% {opacity:0;}
+				5% {opacity:1;}
+				50% {top:50%;}
+				95% {top:100%;transform:scale(1.8,1.8);}
+				100% {opacity:0;}
+			}
+			@keyframes ichigo {
+				00% {opacity:0;}
+				5% {opacity:1;}
+				95% {transform:scale(3,3);}
+				100% {opacity:0;}
+			}
+			@keyframes saori {
+				00% {opacity:0;}
+				80% {opacity:0.85;}
+				95% {transform:scale(5,5);}
+				100% {opacity:0;}
+			}
+			@keyframes orihime {
+				00% {opacity:0;}
+				80% {opacity:0.9;}
+				95% {transform:scale(2.3,2.3);}
+				100% {opacity:0;top:70%;}
+			}
+			@keyframes up {
+				0% {top:40%;opacity:0;}
+				85% {opacity:1;}
+				90% {transform:scale(1.7,1.7);}
+				100% {opacity:0;}
+			}
+			@keyframes giggle {
+				10% {transform:translateX(-10px);}
+				40% {transform:translateX(20px);}
+				70% {transform:translateX(-10px);}
+				90% {transform:translateX(20px);}
+				95% {transform:translateX(10px);}
+				100% {transform:translateX(0px);}
+			}
+			@keyframes clouds {
+				0% {opacity:0.3;background:url('imgs/fx/dark.gif') no-repeat;background-size:cover;}
+				40% {background:url('imgs/fx/dark.gif') no-repeat;background-size:cover;opacity:0.6;}
+				90% {background:url('imgs/fx/dark.gif') no-repeat;background-size:cover;opacity:1;}
+				100% {background:url('imgs/fx/dark.gif') no-repeat;background-size:cover;opacity:0.4;}
+			}
+			@keyframes move {
+				0% {transform:scale(1,1) rotate(0deg);}
+				20% {transform:scale(1.07,1.07) rotate(2deg);}
+				50% {transform:scale(1,1) rotate(0deg);}
+				70% {transform:scale(1.07,1.07) rotate(-2deg);}
+				100% {transform:scale(1,1) rotate(0deg);}
+			}
+			@keyframes fade {
+				0% {opacity:1;}
+				40% {opacity:0;}
+				100% {opacity:1;}
+			}
+			@keyframes glow {
+				0% {filter:blur(0px);transform:scale(1,1) rotate(0deg);}
+				90% {filter:blur(10px);transform:scale(2,2) rotate(5deg);}
+				100% {opacity:0;}
+			}
+			@keyframes grap {
+				0% {opacity:0;}
+				100% {bottom:0%;}
+			}
+			@keyframes grap2 {
+				0% {opacity:0;}
+				100% {bottom:-20%;}
+			}
+			@keyframes flotter {
+				0% {transform: translateY(-15px)}
+				25% {transform: translateY(0px)}
+				50% {transform: translateY(15px);filter: brightness(1.5);}
+				75% {transform: translateY(0px)}
+				100% {transform: translateY(-15px)}
+			}
+			@keyframes roter {
+				0% {transform: rotate(0deg) translate(-10px) rotate(0deg);}
+				50% {transform: rotate(180deg) translate(0px) rotate(-180deg) scale(1.05,1.05) ;}
+				100% {transform: rotate(0deg) translate(-10px) rotate(0deg);}
+			}
+			@keyframes black_meteorite {
+				0% {transform:scale(1,1);left:-40%;top:40%;}
+				60% {transform:scale(1.4,1.4) rotate(90deg);left:150%;top:20%;}
+				100% {transform:scale(1,1) rotate(60deg);top:100%;}
+			}
+			@keyframes bouger_up_down {
+				0% {top:15%;}
+				50% {top:16%;}
+				100% {top:15%;}
+			}
+			@keyframes dissolve {
+				0% {opacity:1;}
+				99% {opacity:0;}
+				100% {display:none;}
+			}
+			@keyframes flouter {
+				0% {filter:blur(0px);transform:scale(1.05,1.05);}
+				50% {filter:blur(2px);transform:scale(1.2,1.2);}
+				100% {filter:blur(0px);transform:scale(1.05,1.05);}
+			}
+			@keyframes shift {
+				0% {transform:translate(0px,0px);}
+				25% {transform:translate(0px,2px);}
+				75% {transform:translate(0px,-1px);}
+				100% {transform:translate(0px,0px);}
+			}
+			@keyframes shiftLeft {
+				0% {transform:skew(1deg,2deg) translate(0px,0px);}
+				25% {transform:skew(1deg,2deg) translate(0px,3px);}
+				75% {transform:skew(1deg,2deg) translate(0px,-3px);}
+				100% {transform:skew(1deg,2deg) translate(0px,0px);}
+			}
+			@keyframes shine {
+				0% {transform:scale(1,1);}
+				50% {transform:scale(1.1,1.1);filter:brightness(2);}
+				100% {transform:scale(1,1);filter:none;}
+			}
+			@keyframes shiftRight {
+				0% {transform:skew(-1deg,-2deg) translate(0px,0px);}
+				25% {transform:skew(-1deg,-2deg) translate(0px,3px);}
+				75% {transform:skew(-1deg,-2deg) translate(0px,-3px);}
+				100% {transform:skew(-1deg,-2deg) translate(0px,0px);}
+			}
+			body {
+				background:white;
+				font-family:verdana !important;
+				width:100vw;
+				height: 100vh;
+				margin:0px;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 0px !important;
+				overflow:hidden;
+				outline:none !important;
+				display:flex;
+				justify-content:space-between;
+				outline:none !important;
+			}
+			#background {
+				background-size:cover;
+				position:absolute;
+				top:0;
+				left:0;
+				z-index:-10;
+				background: white;
+				outline:none !important;
+			}
+
+			#container {
+				display:flex;
+				justify-content: space-between;
+				flex-direction: column;
+				width:100%;
+				height:100%;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 0px !important;
+				background: white;
+				border-radius:3px;
+				opacity:0;
+				overflow:hidden !important;
+			}
+			p {
+				margin-left:auto;
+				margin-right:auto;
+			}
+			#cases {
+				height:55%;
+				position: relative;
+				width:95%;
+				display:flex;
+				padding-top: 3%;
+				flex-wrap:wrap;
+				background:white;
+				box-shadow: inset -1px 0px 31px 17px rgba(235,232,235,1);
+			}
+				#cases img {
+					border:none;
+					border-radius:4px;
+					height:47%;
+					width:46%;
+					border-radius: 4px;
+					background-size:cover;
+					margin-right:1.5%;
+					margin-left:2.1%;
+					transition:all .2s linear;
+				}
+				#cases img:hover {
+					transform:scale(1.02,1.02);
+				}
+
+				@keyframes zoom-enter {
+					0% {opacity: 0;transform: scale(3,3);filter: blur(3px);}
+					100% {opacity: 1;transform: scale(1,1) rotate(1080deg);filter: blur(0px);}
+				}
+				@keyframes struggle {
+					0% {transform: scale(0.9,0.9);}
+					5% {opacity: 0.3;transform: scale(1.1,1.1);filter: brightness(1.5);}
+					6% {opacity: 0.5;transform: scale(1.13,1.13);filter: brightness(1.5);}
+					100% {opacity: 1;transform: scale(0.9,0.9);filter: none;}
+				}
+				#cases .special {
+					position: absolute;
+					width: 125px;
+					height: 125px;
+					background:#2c3e50 url('imgs/shenron2.png') 50% 50% no-repeat;
+					border:15px #bdccdb solid !important;
+					background-size:50% 50% !important;
+					transition:all 0.05s linear;
+					outline:none;
+					border-radius:50%;
+				}
+			#reponse {
+				display:flex;
+				justify-content:center;
+				height:8%;
+				margin-left:auto;
+				margin-right:auto;
+				padding:5px;
+				margin-top:-5px;
+			}
+				#reponse b {
+					height:120px;
+					width:110px;
+					background:white;
+					color:black;
+					margin-right:3px;
+					border-radius:2px;
+					box-shadow: inset -1px 0px 31px 0px rgba(224,221,224,1);
+					border:2px grey solid;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-family:Arial !important;
+					font-weight:bolder;
+					font-size:2.8em;
+				}
+				#rep {
+					display: flex;
+				}
+				#rep b {
+					height: 50px;
+				    width: 50px;
+				    background: black;
+				    color: black;
+				    text-align: center;
+				    display: inline-block;
+				    align-items: center;
+				    vertical-align: middle;
+				    justify-content: center;
+				    padding-top: 5px;
+				    font-size: 30;
+				    font-family: calibri;
+				    font-weight: bolder;
+				    text-decoration: none;
+				    border-radius: 3px;
+				    background: white;
+				    border-bottom: 1px #dcdde1 solid;
+				    border-radius: 2px;
+				    box-shadow: 0px 7px 4px 0px rgba(230,237,236,1);
+				}
+			#choix {
+				display:flex;
+				justify-content:space-between;
+				flex-wrap:wrap;
+				height:20%;
+				width:90%;
+				margin-left:auto;
+				margin-right:auto;
+				padding:5px;
+				font-family: Arial !important;
+			}
+				.a,.b {
+					height:40%;
+					width:15.5%;
+				    display: flex;
+				    align-items: center;
+				    justify-content: center;
+					background:black;
+					color:white;
+					border-radius:4px;
+					font-size:2.8em;
+					font-weight:bold;color: #fff;
+					text-decoration: none;
+					border-radius: 5px;
+					box-shadow: 0 1px 0px rgba(255,255,255,0.1) inset, 0 0px 1px rgba(0,0,0,0.7);
+					background: #2c3e50; /*  */
+					border: 1px solid #141414;
+					border-bottom: 10px solid black;
+					text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 2px 0 #b9b9b9, 0 2px 0 #aaa, 0 3px 1px rgba(0,0,0,.1), 0 0 2px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 1px 2px rgba(0,0,0,.2), 0 5px 5px rgba(0,0,0,.25), 0 5px 5px rgba(0,0,0,.2), 0 10px 10px rgba(0,0,0,.15);
+				}
+					.a:hover {
+						cursor:pointer;
+					}
+				.b {
+					opacity:0.8;
+					background:#ecf0f1;
+					color:grey;
+					font-weight:bold;
+					background-clip: text;
+					text-shadow: 0px 3px 3px rgba(255,255,255,0.5) !important;
+					box-shadow:inset 0 0 10px grey !important;
+				}
+					.b:hover {
+						cursor:pointer;
+					}
+				#dashboard {
+					display:flex;
+					justify-content:flex-start;
+					height:130px;
+					margin-left:auto;
+					margin-right:auto;
+					width:100%;
+					background:#34495e;
+					margin-top:-1px;
+					border-radius:5px;
+				}
+					#dashboard span {
+						width:35%;
+						padding:4px;
+						display:flex;
+						align-items: center;
+					}
+				#chrono {
+						width:30% !important;
+						background:url('imgs/alarm.png') 5px 50% no-repeat;
+						background-size:35px 35px;
+						padding-left:50px !important;
+						color:white;
+						font-weight:bold;
+						font-size:28;
+						margin-left:10px;
+						vertical-align: middle;
+				}
+				#tokens {
+						width:20% !important;
+						background:url('imgs/tokens.png') 10px 50% no-repeat;
+						background-size:35px 35px;
+						padding-left:57px !important;
+						font-family:calibri;
+						color:white;
+						font-weight:bolder;
+						font-size:40;
+				}
+				#level {
+					background:none;
+					color:black;
+					height: 95%;
+					width:15% !important;
+					justify-content: center;
+					color:white;
+					font-weight:bolder;
+					font-size:40;
+					font-family:calibri !important;
+					border:3px white solid;
+					border-right:none;
+					color: black;
+					background: white;
+					clip-path:polygon(76% 1%, 100% 68%, 82% 100%, 0 99%, 0 0);
+				}
+				#black {
+					position:absolute;
+					z-index:-2;
+					top:0;
+					left:0;
+					width:100vw;
+					height:100vh;
+					background:rgba(1,1,1,0.8);
+					overflow:hidden;
+				}
+				#ok, #setting, #oko {
+					display: flex;
+				    flex-direction: column;
+				    margin-top: 140px;
+				    height: 400px;
+				    width: 680;
+				    margin-right: auto;
+				    margin-left: auto;
+				    background: white;
+				    padding: 15px;
+				    border-radius: 4px;
+				    overflow: hidden;
+				    z-index: 10;
+				    position: relative;
+				}
+				#oko {
+					height: 300px !important;
+				}
+				#setting {
+					height:800px !important;
+				    border-radius: 0px;
+				    padding: 5px;
+				    border:none !important;
+				}
+					#setting button {
+						margin-top:auto;
+					}
+					.bottom {
+						position: absolute;
+						bottom: 10px;
+						right: 5px;
+					}
+						.bottom button {
+						    background: #34495e !important;
+						    border-bottom-color: #090d10 !important;
+						}
+					#intro, .bande {
+					    font-weight: bolder;
+					    margin-bottom: 15px;
+					    color: silver;
+						font-size: 35;
+					    font-family: calibri;
+					}
+					.bande {
+						color:white;
+						display: flex;
+						align-items: center;
+						height:70px;
+						font-size: 30 !important;
+					    font-family: Arial !important;
+						background:#34495e url(imgs/fx/school.png) 15px 40% no-repeat;
+						background-size:40px 40px;
+						padding-left:75px;
+						box-shadow: 0px 13px 11px -6px rgba(189,189,189,1);
+					}
+					#right_side, #right_side2 {
+						display:flex;
+						flex-direction:column;
+						height:245px;
+						padding-top: 20px;
+					}
+					#right_side2 {
+						height:140px !important;
+					}
+					#accroche, #ennonce {
+						color: grey;
+					    font-weight: bold;
+					    font-family: calibri;
+					    margin-bottom: 8px;
+					    font-size: 28;
+					}
+					#ennonce {
+						margin-top:50px;
+					    font-size: 27;
+					    padding-left: 25px;
+					}
+						#ennonce b {
+							color:#34495e;
+							margin-bottom:30px;
+							font-size:28;
+							background:url(imgs/fx/rule.png) 5px 40% no-repeat;
+							background-size:25px 25px;
+							padding-left:40px;
+							margin-left: -25px;
+						}
+						#ennonce i {
+							color:silver !important;
+							text-decoration: none;
+						}
+						#ennonce u {
+							color:black !important;
+							text-decoration: none;
+						}
+						#result img {
+							margin-right:15px;
+							width:200px;
+							height:200px;
+							margin-top: 20px;
+						}
+						#supconseil {
+							display: flex;
+							flex-direction: column;
+							width: 90%;
+							height:605px;
+							margin-left: auto;
+							margin-right: auto;
+							overflow:auto;
+						}
+						#conseil {
+							width: 100%;
+							height: 100%;
+							margin-left: auto;
+							margin-right: auto;
+							margin-bottom:35px;
+							display: flex;
+						}
+							#conseil img {
+								margin-right:15px;
+								width:200px !important;
+								height:200px;
+								margin-top: 200px;
+							}
+					span button {
+						height: 80px;
+					    width: 180px;
+					    font-size: 25;
+					    padding-top: 5px;
+					    font-weight: bold;
+					    color: white;
+					    float: right;
+					    background: #2c3e50;
+					    border-radius: 3px;
+					    border: none;
+					    margin-top: auto;
+					    border-bottom: 7px black solid;
+					    transition: all 0.05s linear;
+					}
+						span button:hover {
+							cursor:pointer;
+							outline:none;
+						}
+						span button:active {
+							border-bottom:2px black solid;
+							outline:none;
+						}
+					#backsound {
+						position:absolute;
+						left:2%;
+						bottom:2%;
+						outline:none !important;
+						opacity:0.2;
+						transition:opacity 0.5s linear;
+					}
+						#backsound:hover {
+							opacity:1;
+						}
+					.hint, .hinta {
+						height:125px !important;
+						width:125px !important;
+						font-size:17;
+						font-weight:bold;
+						color:white;
+						background:#4cd137 url('imgs/shenron2.png') 50% 50% no-repeat;
+						border:15px #2c3e50 solid !important;
+						background-size:50px 50px !important;
+						transition:all 0.05s linear;
+						outline:none;
+						border-radius:50%;
+						margin-top:20%;
+					}
+						.hint:hover {
+							cursor:pointer;
+							outline:none;
+						}
+						.hint:active {
+							border-bottom:1px black solid;
+							outline:none;
+						}
+					.hinta {
+						height:100px !important;
+						width:100px !important;
+						border:none !important;
+						background-size:50px 50px !important;
+						margin-right: -3%;
+						margin-top:0%;
+					}
+						.hinta:hover {
+							cursor:pointer;
+							outline:none;
+							transform:scale(1.04,1.04);
+						}
+						.hinta:active {
+							border-bottom:1px black solid;
+							outline:none;
+						}
+					#preload {
+						position:absolute;
+						z-index:10;
+						top:0;
+						left:0;
+						width:100vw;
+						height:100vh;
+						overflow: hidden !important;
+					}
+					#menu {
+						position:absolute;
+						top:0;
+						left:0;
+						width:100vw;
+						height:100vh;
+						z-index:15;
+						overflow: hidden !important;
+					}
+						#menu span {
+							position:absolute;
+							bottom:1%;
+							right:2%;
+							font-size:16;
+							font-weight: bolder;
+							color: white;
+						}
+					#page_garde{
+					    position: absolute;
+					    top: 0;
+					    left: 0;
+					    width: 100%;
+					    height: 100%;
+					    z-index: 18;
+					    background-size: cover;
+					    animation: flouter 5s infinite forwards;
+					    background: url(imgs/bg/pag_garde.png) no-repeat;
+					    background-size: 100% 100%;
+					    overflow: hidden !important;
+					    outline: none;
+					}
+						#page_garde:hover {
+							cursor:pointer;
+						}
+					#avant {
+						position:absolute;
+						top:0;
+						left:0;
+						width:100vw;
+						height:100vh;
+						z-index:18;
+						background:black;
+						z-index:20;
+						animation-name:dissolve;
+						animation-duration:5s;
+						animation-iteration-count:1;
+					}
+					#loading {
+						z-index:16;
+						display:flex;
+						position:absolute;
+						bottom:5%;
+						height:150px;
+						width:40%;
+						left:32%;
+						background:none;
+					}
+						#yondai {
+							margin-left:auto;
+							margin-right: auto;
+							background:white;
+							width:300px;
+							height:300px;
+							padding: 10px;
+							border-radius: 50%;
+							box-shadow: 0px 2px 39px 13px rgba(0,0,0,0.75);
+							animation: struggle 2s infinite;
+						}
+						#loading img {
+							height:90px;
+							width:90px;
+						}
+						#loading span {
+							font-size:40;
+							display: flex;
+							align-items: center;
+							font-weight:bolder;
+							font-family:Arial;
+							height:45px;
+							color:white;
+							animation-name:fade;
+							animation-duration:3s;
+							animation-iteration-count:infinite;
+							margin-top:20px;
+						}
+					#right {
+						width:400px;
+						height:400px;
+						margin-right:auto;
+						margin-left:auto;
+						opacity:0.01;
+						padding-bottom:20px;
+						transition:all 0.5s linear;
+						transform:skew(-1deg,-2deg) !important;
+						border:3px white solid;
+						border-radius:4px;
+					}
+						#right:hover {
+							opacity:1;
+							animation:shiftRight 2s infinite;
+						}
+					#left {
+						margin-right:auto;
+						margin-left:auto;
+						width:400px;
+						height:400px;
+						margin-left:10px;
+						opacity:0.01;
+						padding-bottom:20px;
+						transition:all 0.5s linear;
+						transform:skew(1deg,2deg) !important;
+						border:3px white solid;
+						border-radius:4px;
+						overflow:hidden;
+					}
+						#left:hover {
+							opacity:1;
+							animation:shiftLeft 2s infinite;
+						}
+					#rules {
+						height:100%;
+						width:97%;
+						margin-top:0;
+						padding:5px;
+						color:white !important;
+						overflow:auto;
+					}
+					#academie {
+						margin-top:0 !important;
+						display:block;
+						height:30px;
+						width:90%;
+						background:#34495e url('imgs/fx/konoha.png') 3% 51% no-repeat;
+						background-size:17px 15px;
+						font-size:19 !important;
+						font-family:calibri;
+						font-weight:bold;
+						color:white;
+						padding-top:10px;
+						padding-left:40px;
+					}
+						#explain {
+							font-size:15;
+							font-family:calibri;
+							font-weight:bold;
+							color:white;
+							padding-left:10px;
+							padding-top:70px;
+							padding-bottom:20px;
+						}
+					#explain a {
+						display:block;
+						height:30px;
+						width:380px;
+						font-size:17;
+						padding-top:10px;
+						font-weight:bold;
+						color:white;
+						margin-left:auto;
+						margin-right:auto;
+						background:#4cd137 50% 60% no-repeat;
+						background-size:25px 25px;
+						border-radius:3px;
+						border:none;
+						text-align:center;
+						border-bottom:5px #219150 solid;
+						transition:all 0.04s linear;
+						outline:none;
+						margin-top:10px;
+						box-shadow: -4px -1px 7px 0px rgba(0,0,0,0.75);
+						text-decoration:none;
+					}
+						#explain a:hover {
+							cursor:pointer;
+							outline:none;
+						}
+						#explain a:active {
+							border-bottom:1px #219150 solid;
+							transform:translate(0px,2px);
+							outline:none;
+						}
+							#explain span {
+								font-size:15;
+								color:white;
+								text-decoration:none;
+								font-style:normal;
+								margin-top:10px;
+								display:block;
+								font-weight:lighter !important;
+								padding-left:15px;
+								width:90%;
+							}
+								#explain span b {
+									font-size:16;
+									color:#4cd137;
+									font-weight:bold !important;
+								}
+								#explain span u {
+									font-size:16;
+									font-style:normal;
+									text-decoration:none;
+									color:yellow;
+									font-weight:bolder !important;
+								}
+						#saver {
+							height:280px;
+							width:430px;
+							padding:15px;
+							background:white;
+							border-radius:4px;
+							margin-left:auto;
+							margin-right:auto;
+							display:flex;
+							flex-direction:column;
+							justify-content:space-around;
+						}
+							#saver span {
+								width:100%;
+							}
+							#code_hint {
+								display:flex;
+								flex-direction:column;
+								justify-content:space-around;
+							}
+								#code_hint b {
+									font-family:calibri;
+									font-size:17;
+									color:silver;
+									font-weight:lighter;
+								}
+								#saver span input {
+									height:40px;
+									font-size:18;
+									border-radius:3px;
+									border:1px rgba(230,237,236,1) solid;
+									padding-left:6px;
+									width:100%;
+									margin-bottom:15px;
+									color:grey;
+									font-family:verdana;
+									box-shadow: 0px 4px 4px 0px rgba(230,237,236,1);
+									outline:none;
+									transition:all 0.5s linear;
+								}
+									#saver span input:focus {
+										border:none;
+										border-bottom:2px silver solid;
+									}
+						.title {
+							color:grey;
+							font-size:21;
+							font-weight:bold;
+							padding-left:35px;
+						}
+						#contain {
+							height:500px;
+							width:500px;
+							border:1px white solid;
+						}
+						.asta {
+							position:absolute;
+							width:400px;
+							height:600px;
+							animation-name:black_meteorite;
+							animation-duration:4s;
+							animation-iteration-count:1;
+						}
+					.clouds {
+						position:absolute;
+						top:0;
+						left:0;
+						width:100%;
+						height:100%;
+					}
+					img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+						display:none;
+					}
+					#levelCodeBanner {
+						opacity:0;
+						display:flex;
+						position:absolute;
+						top:2%;
+						right:0.5%;
+						height:40px;
+						width:0px;
+						padding:4px;
+						font-family:calibri;
+						font-size:18;
+						padding-bottom:6px;
+						overflow:hidden;
+						transition:all 0.5s linear;
+						box-shadow: 1px 11px 7px 0px rgba(0,0,0,0.75);
+					}
+						#levelCodeBanner b {
+							width:70%;
+							padding-top:8px;
+							color:black;
+							background:white;
+							overflow:hidden;
+							text-align:center;
+						}
+						#levelCodeBanner i {
+							padding-top:8px;
+							color:white;
+							width:30%;
+							text-align:center;
+							font-style:normal;
+							background:#34495e;
+							font-weight:bolder;
+							overflow:hidden;
+						}
+					.num_chapitre {
+						position:absolute;
+						top:-6%;
+						left:0;
+						width: 110%;
+						height: auto;
+						padding-top:0%;
+						padding-bottom:4%;
+						padding-left:150px;
+						font-size:80;
+						color:#34495E;
+						background: white url(imgs/fx/book.png) 50px 82% no-repeat;
+						background-size: 70px 85px;
+						font-family:cursive;
+						font-weight: bolder;
+						animation:go_down 0.5s forwards;
+					}
+					.titre_chapitre {
+						position:absolute;
+						top:15%;
+						left:-10%;
+						width: 110%;
+						height: auto;
+						padding:35px;
+						text-align: center;
+						font-size:75;
+						color:white;
+						background-color: #34495E;
+						border:45px white solid;
+						font-family:cursive;
+						animation:go_down2 0.5s forwards linear, bouger_up_down 3s infinite 0.5s forwards;
+					}
+
+					@keyframes come_turned {
+						0% {opacity: 0;transform: translateY(-5%);}
+						100% {opacity: 1;transform: rotate(-5deg) skew(-3deg, 0deg);}
+					}
+					#message {
+						position: absolute;
+						display: flex;
+						justify-content: space-between;
+						flex-direction: column;
+						width: 40%;
+						text-align: center;
+						min-height: 200px;
+						height: auto;
+						padding:30px;
+						left:5%;
+						top:50%;
+						font-size: 35;
+						color:white;
+						font-weight: bolder;
+						background:rgba(1,1,1,0.8);
+						font-family: calibri;
+						opacity: 0;
+						animation:come_turned 1.5s forwards linear;
+					}
+						#message button {
+							margin-left: auto;
+							margin-right: auto;
+							margin-top:25px;
+						}
+					@keyframes come_up{
+						0% {bottom:-20%;opacity: 0;}
+						100% {bottom:-7%;opacity: 1;}
+					}
+					@keyframes flouer{
+						0% {filter:none;}
+						100% {filter:blur(5px) brightness(10);transform:translate(2,2);}
+					}
+					@keyframes kakashi{
+						0% {transform: rotate(0deg);}
+						25% {transform: rotate(3deg);}
+						50% {transform: rotate(0deg);}
+						75% {transform: rotate(-3deg);}
+						100% {transform: rotate(0deg);}
+					}
+					#kakashi {
+						position: absolute;
+						right:-10%;
+						opacity: 0;
+						bottom:-20%;
+						animation: come_up 1s 0.5s forwards, kakashi 5s infinite 1.7s linear; 
+					}
+					@keyframes show {
+						0% {opacity: 0;}
+						100% {opacity: 1;}
+					}
+					@keyframes showoff {
+						0% {opacity: 1;}
+						100% {opacity: 0;}
+					}
+					@keyframes show_thanks {
+						0% {opacity: 1;}
+						50% {filter:brightness(3);}
+						100% {background:url('imgs/bg/merci.jpg');background-size: cover;}
+					}
+					@keyframes scroll {
+						0% {bottom: -1100px;}
+						100% {bottom: 100%;}
+					}
+					#simon {
+						position:absolute;
+						right:-16%;
+						bottom: 3%;
+						width:600px;
+						height:600px;
+						opacity: 0;
+						animation: show 2s linear forwards;
+					}
+					#credits {
+						position:absolute;
+						display: flex;
+						flex-direction: column;
+						left:5%;
+						background:none;
+						bottom: -1100px;
+						width:500px;
+						height:auto;
+						color:white !important;
+						font-size:27;
+						opacity: 0;
+						animation: show 2s linear forwards, scroll 115s linear forwards;
+					}
+						#credits b, .music, .sfx, .gif, .img {
+							color:black !important;
+							background-color: white;
+							padding:20px;
+							clip-path: polygon(0 0, 94% 21%, 96% 100%, 2% 97%);
+							margin-top:80px;
+							margin-bottom:20px;
+						}
+						.music {
+							clip-path: polygon(1% 0, 100% 0, 91% 91%, 0% 100%) !important;
+						}
+						.gifs {
+							clip-path: polygon(0 3%, 96% 0, 100% 100%, 0 98%) !important;
+						}
+						.im {
+							clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 100%) !important;
+						}
+						#credits u {
+							text-decoration: none;
+							padding-left: 30px;
+						}
+		</style>
+		<meta name="viewport" content="user-scalable=no" />
+	</head>
+	<body>
+		<div id="game">
+		<div id="container">
+			<p id="dashboard">
+				<span id="level">1</span>
+				<span id="chrono"><b>00 :&nbsp;</b><b> 00 :</b><b>&nbsp;00</b></span>
+				<span id="tokens">0</span>
+				<span style="margin-left:5px;">
+					<button id='shenron' class="hint" onclick="generate_box('exaucer()','Reveal me the first letter of the word',70,'shenron','shenron')" style="margin-left:auto;"></button>
+					<button id='boule' class="hint" onclick="generate_box('sharingan()','Reveal me one letter of the word',30,'hint','sharingan')" style="background:#4cd137 url('imgs/sharingan.png') 50% 50% no-repeat;"></button>
+					<button onclick="set_setting()" id="mute" class="hinta" style="border:none;background:url('imgs/fx/setting.png') 50% 50% no-repeat;background-size:50px 50px;box-shadow:none;" ></button>
+					
+				</span>
+			</p>
+		</div>
+		<div id="black"></div>
+		<div id="preload" style="display: none;"></div>
+		<audio id="loads" type="audio/mp3" style="display:none;"></audio>
+		<audio id="sfx" type="audio/mp3" style="display:none;"></audio>
+		<audio id="sfxx" type="audio/mp3" style="display:none;"></audio>
+		<audio id="fx" type="audio/mp3" style="display:none;"></audio>
+		<audio id="back" type="audio/mp3" style="display:none;" loop></audio>
+		<audio id="effect" type="audio/mp3" style="display:none;"></audio>
+		<audio id="pre_sound" type="audio/mp3" style="display:none;"></audio>
+		<div id="background"></div>
+		<div id="menu">
+			<center><img src="logo.png" id="yondai" /></center>
+			<span>By DevCBueaMonster</span>
+		</div>
+		<div id="loading">
+			<img id="photo" class="profile_picture" align="right"/>
+			<img src="imgs/fx/spinner.gif" align="right" />
+			<span>Charging</span>
+		</div>
+	</div>
+		<script>
+			function onStart() {
+      // This is called when the user has tapped Play
+      // Information from the SDK can now be accessed
+              $('#photo').attr('src', FBInstant.player.getPhoto());
+              
+
+             $('#game').show();
+    }
+
+			navigator.__defineGetter__('userAgent', function(){
+			    return 'Mozilla/5.0 (Linux; <Android Version>; <Build Tag etc.>) AppleWebKit/<WebKit Rev> (KHTML, like Gecko) Chrome/<Chrome Rev> Mobile Safari/<WebKit Rev>'; // customized user agent
+			});
+			navigator.userAgent; // 'foo'
+
+			
+			var mots = new Array("K A T A N A","S A I T A M A","Z O R O","G A R O U","D R A G O N","U C H I H A","N I N J A","H E R O","M A G I E","D E M O N","C H I E N","R I V A L","F E U","P E R V E R S","C H A U V E","Z E R O","T I T A N","M U T A N T","E A U","I C H I G O","B L O N D","B A K I","L U M I E R E","H I N A T A","G L A C E","M I D O R I Y A","M A R C","F O O T B A L L","A K U M A","R O I","J E U X","I S E K A I","N I S E K O I","S A N G","K E N","V E N T","T U E U R","Y U G I O H","Z E T S U","R A N M A","E C C H I","C H A S S E U R","M E D E C I N","Z O M B I E","T A T E","Y E U X","E S C A N O R","R A P I D E","N A N A","K A M I","H O K A G E","M E C A","L E L O U C H","F I L S","C L O V E R","E X P L O S E R","P S Y","R O U X","N A R U T O","C O R B E A U","G O","K A N O J O","E C A R L A T E","A O","L O L I C O N","Z E T S U B O","A I L E S","O P P A I","Y A N D E R E","A K A","Y A M I","P I L O T E","J I R E N","Y O N","C O D E","K A I C H O U","R Y O","H A R E M","C H A I K A","T O K Y O","W A I F U","G A R O","R E","H I M E","K U R O","F O R T","S E I N E N","M A I T R E","T E M P S","M E N S O N G E","M O R T E S","M O N S T R E","T E N S H I","S H O N E N","S P O R T","A I R","O R","K I N T A R O U","S O L E I L","S C A N");
+			var greatings = new Array("Yare Yare...","Sugoiii !","Omoshiroi !","Nani ??","Omae wa mô Shindeiru","Dattebayô !","Ara ara...","Yaroo !!","Subarashii","Kimochii","Owari da","Shineee !","Maadadaaaaa","Muda muda","Ora ora ora");
+			var imgs = new Array("13,14,15,16","1,2,3,4","5,6,7,8","9,10,11,12","17,18,19,20","109,90,110,111","112,102,113,114","36,115,116,117","118,19,119,120","70,121,122,123","124,125,126,127","128,33,118,129","130,131,19,91","132,20,134,133","135,116,136,137","138,139,140,141","142,143,144,145","146,147,148,149","150,151,152,153","155,154,87,156","157,158,159,103","10,160,161,162","39,163,164,165","167,168,36,102","169,170,131,171","172,11,173,174","175,176,177,178","179,180,181,182","183,184,185,30","186,187,188,189","190,191,192,193","194,195,196,138","21,22,23,24","25,26,27,28","29,30,31,32","33,34,35,36","37,38,39,40","42,43,44,45","46,47,48,49","50,51,52,10","53,54,55,56","41,35,57,58","59,60,61,62","63,64,65,66","67,11,68,69","70,71,72,73","74,75,76,77","78,79,80,81","31,83,84,82","85,86,87,88","89,90,91,92","93,94,95,96","97,98,99,100","101,102,103,104","105,106,107,108","197,198,199,200","201,202,203,204","87,205,101,207","208,209,210,211","212,213,128,214","215,216,217,218","219,220,221,222","223,224,225,226","227,228,16,170","229,230,231,232","233,234,235,236","237,238,239,240","241,242,243,244","245,246,247,248","125,249,20,250","251,252,253,97","254,255,256,257","258,98,137,259","260,260,260,260","261,141,262,263","264,205,134,265","266,267,268,269","20,41,115,229","270,271,272,273","274,275,276,277","278,279,280,198","281,283,282,237","284,285,286,287","288,289,290,291","292,293,294,295","135,116,207,296","60,26,297,298","299,300,133,115","301,302,303,304","305,306,307,308","309,310,311,312","315,314,313,60","316,317,318,319","321,322,157,323","324,325,326,327","328,329,330,34","331,332,333,334","335,336,337,338","347,340,341,348","343,344,345,346");
+			var gifs = [1,2,3,4,5,6,7,8,9,10,11,12];
+			var letters = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
+			var numbs = "1 2 3 4 5 6 7 8 9 0";
+			var first=0;
+			var second=0;
+			var load=0;
+			var init=0
+			var vol=1;
+			if (!localStorage.player_level) {
+			  localStorage.player_level = 0;
+			}
+			if (!localStorage.player_score) {
+			  localStorage.player_score = 40;
+			}
+			if (!localStorage.special_activated) {
+			  localStorage.special_activated = 0;
+			}
+			var back_vol=0.3;
+			var to_load = new Array("ground1","dio","book","almight1","midoriya1","itachi","hinata","escanor","02","zoro","light1","light2","asta","naruke","ground2","ground3","ground4","aizen","seiya","lelouch","ichigo","orihime","lucy","athena","kakashi");
+			/*var codes = new Array("bibi","bobo","baba","bebe","bubu","byby","babe","bibe","bebi");
+			var bonus = new Array("MinetaPlusFortQueAlmight","HinataEstUneDeesse");*/
+			var sons = new Array("ara-ara","backsound2","whoosh3","whoosh2","whoosh","tup","pok","click","click2","ShenronTheme","yooo","plus-ultra","migatte","roronoa","sharingan","athena","success","success_slide","special_arrival","struggle","ichigo","ganbatte","orchestra","snare");
+
+			/* function chargersons(){
+				var toload = document.getElementById('loads');
+				toload.volume = 0.0;
+				var compteur_son = 0;
+				var sonsloaded = setInterval(function(){
+					if(compteur_son<sons.length-1){
+						toload.src='sfx/'+sons[compteur_son]+'.mp3';
+						toload.play();
+						compteur_son++;
+						plus();
+					}
+					else {clearInterval(sonsloaded);toload.pause();}
+				},2000);
+			}
+			chargersons(); */
+			// oncontextmenu="return false" onselectstart="return false" ondragstart="return false"
+
+			/*for(var g=50;g<imgs.length;g++){
+				alert(mots[g]+' : '+imgs[g]+'\n');
+			}*/
+			//background:url('imgs/fx/volume_on.png') 50% 48% no-repeat;background-size:20px 20px;
+
+			/* function load_code(indice){
+				var bg = document.getElementById('black');
+				var msg = document.createElement('span');
+				msg.setAttribute('id','levelCodeBanner');
+				indice=parseInt(indice);
+				msg.innerHTML='<b>Code de sauvergarde niveau '+indice+'</b><i>'+codes[(indice/10)-1]+'</i>';
+				bg.appendChild(msg);
+				msg.style.transition="all 0.5s linear";
+				setTimeout( function(){
+					play_effect('notif');
+					msg.style.width="400px";
+					msg.style.opacity=1;
+					msg.style.animationName="shift";
+					msg.style.animationDuration="3s";
+					msg.style.animationIterationCount="infinite";
+					msg.style.transition="all 0.5s linear";
+				},500);
+				setTimeout( function(){
+					msg.style.width="0px";
+					msg.style.opacity=0;
+					play_effect('whoosh5');
+				},25000);
+			} */
+
+			function volume(elt){
+				var audios = document.getElementsByTagName('audio');
+				if(vol==1) { 
+					for(i=0;i<audios.length;i++){
+						audios[i].volume="0.0";
+					}
+					elt.style.background="url(imgs/fx/volume_off.png) 50% 48% no-repeat";
+					elt.style.backgroundSize="20px 20px";
+					vol = 0;
+				}
+				else {
+					for(i=0;i<audios.length;i++){
+						audios[i].volume="1.0";
+					}
+					elt.style.background="url(imgs/fx/volume_on.png) 50% 48% no-repeat";
+					elt.style.backgroundSize="20px 20px";
+					vol = 1;
+					document.getElementById('back').volume=back_vol;
+				}
+			}
+
+			function opac(elt,niv){
+				elt.style.opacity=niv;
+			}
+
+			/* function ping(){
+				var image = new Image();
+				image.src = "http://127.0.0.1/www/4%20images%201%20manga/imgs/bg/3.jpg";
+				setTimeout
+				(
+				    function()
+				    {
+				        if ( !image.complete || !image.naturalWidth )
+				            alert('nope');
+				        else
+				            alert('ok');
+				    },2000
+				);
+			}
+
+			 function generer_code(){
+				var code='';
+				var ind=0;
+				var lets = letters.split(' ');
+				var num = numbs.split(' ');
+				for(var i=0;i<15;i++){
+					ind = Math.floor(Math.random()*2);
+					if(ind==0) {code+=lets[Math.floor(Math.random()*lets.length)];}
+					else if (ind==1) {code+=num[Math.floor(Math.random()*num.length)];}
+					else {code+=lets[Math.floor(Math.random()*lets.length)];}
+				}
+				alert(code);
+			} */
+
+			plaay_effect('backsound2');lancer();
+
+			function plus(){
+				load++;
+			}
+
+
+			function pre_play(a){
+				var ef = document.getElementById('pre_sound');
+				ef.volume="0.0";
+				ef.src='sfx/'+a+'.mp3';
+				ef.play();
+			}
+			function play_effect(a){
+				var ef = document.getElementById('effect');
+				ef.src='sfx/'+a+'.mp3';
+				ef.play();
+			}
+			function play_sfx(a){
+				var ef = document.getElementById('sfx');
+				ef.src='sfx/'+a+'.mp3';
+				ef.play();
+			}
+			function play_sfxx(a){
+				var ef = document.getElementById('sfxx');
+				ef.src='sfx/'+a+'.mp3';
+				ef.play();
+			}
+			function plaay_effect(a){
+				var eff = document.getElementById('back');
+				eff.volume=back_vol;
+				eff.src='sfx/'+a+'.mp3';
+				eff.play();
+			}
+			function playy_effect(a){
+				var efff = document.getElementById('fx');
+				var def = document.getElementById("back");
+				def.volume=0.0;
+				efff.src='sfx/'+a+'.mp3';
+				efff.play();
+			}
+			function back_volume() {
+				var bgson = document.getElementById("back");
+				setTimeout(function(){bgson.volume=back_vol},2000);
+			}
+
+			/* function show_them(){
+				var bloc = document.getElementById('black');
+				var img = document.createElement('img');
+				var rightt = document.getElementById('right');
+				var leftt = document.getElementById('left');
+				img.src='imgs/fx/asta.png';
+				var delai = 1500;
+				img.setAttribute('class','asta');
+				setTimeout(function(){bloc.appendChild(img);},delai);
+				setTimeout(function(){bloc.removeChild(img);},delai+2000);
+				setTimeout( function(){ 
+					leftt.style.opacity=1;play_effect('whoosh');
+					setTimeout(function(){leftt.style.opacity=0;},500);
+				},delai+400);
+				setTimeout( function(){ 
+					rightt.style.opacity=1;play_effect('whoosh');
+					setTimeout(function(){rightt.style.opacity=0;},500);
+				},delai+900);
+			} */
+
+			var son_ok=0;
+			function charger(){
+				var bg = document.getElementById('menu');
+				var bloc = document.getElementById('container');
+				var pre = document.getElementById('preload');
+				var loading = document.getElementById('loading');
+
+				var count=setInterval(function(){
+						if(load>=(16+sons.length+to_load.length)){
+							pre.style.display="none";
+							loading.style.transition="all 0.5s linear";
+							pre.style.zIndex=-2;
+							setTimeout(function(){
+								bg.style.animationName="glow";
+								bg.style.animationDuration="2s";
+								bg.style.animationIterationCount="1";
+							},100);
+							setTimeout(function(){
+								if(son_ok==0) {play_effect('whoosh4');son_ok=1;} 
+								loading.style.opacity=0;
+								loading.style.display="none";
+							},500);
+							setTimeout(function(){clearInterval(count);bg.style.opacity=0;bg.style.display="none";init=1;},2000);
+						}},1000);
+
+				var initing=setInterval(function(){
+					if(init==1){
+						bloc.style.transition="all 2s linear";bloc.style.opacity=1;initialiser(localStorage.player_level);clearInterval(initing);setTimer();init=0;
+					};},100);
+			}
+
+			function lancer(){
+				var bg = document.getElementById('menu');
+				var pre = document.getElementById('preload');
+				bg.style.background="#34495E url(\'imgs/bg/menu.png\') no-repeat";
+				document.getElementById('yondai').style.marginTop =(window.innerHeight-document.getElementById('yondai').offsetHeight)/2+'px';
+				bg.style.backgroundSize="cover";
+				bg.style.animationName="move";
+				bg.style.animationDuration="100s";
+				bg.style.animationIterationCount="infinite";
+				for(var i=1;i<18;i++){
+					var img=document.createElement('img');
+					img.setAttribute('onload','plus()');
+					pre.appendChild(img);
+					img.src='imgs/fx/'+i+'.gif';
+				}
+				for(var i=0;i<to_load.length;i++){ 
+					var img=document.createElement('img');
+					img.setAttribute('onload','plus()');
+					pre.appendChild(img);
+					img.src='imgs/fx/'+to_load[i]+'.png';
+				}
+					var img=document.createElement('img');
+					img.setAttribute('onload','plus()');
+					pre.appendChild(img);
+					img.src='imgs/bg/merci.jpg';
+				var audio = document.getElementById('pre_sound');
+				audio.volume=0.0;
+				var load_sons = 0;
+				while(load_sons<sons.length){ 
+					audio.src='sfx/'+sons[load_sons]+'.mp3';
+					audio.addEventListener('canplaythrough', plus());
+					load_sons++;
+				}
+				
+				var state=0;
+				/* var load_sounds = setInterval( function(){
+						if(state<sons.length){
+							pre_play(sons[state]);
+							state++;
+							plus();
+						}
+						else {clearInterval(load_sounds);var ef = document.getElementById('pre_sound');}
+					}
+				,1500);
+
+				for(var i=1;i<13;i++){ 
+					var img=document.createElement('img');
+					img.setAttribute('onload','plus()');
+					pre.appendChild(img);
+					img.src='imgs/fx/'+i+'.gif';
+				}
+					var img=document.createElement('img');
+					img.setAttribute('onload','plus()');
+					pre.appendChild(img);
+					img.src='imgs/fx/shenron.gif';
+					var img=document.createElement('img');
+					img.setAttribute('onload','plus()');
+					pre.appendChild(img);
+					img.src='imgs/fx/hint.gif';
+
+				for(var i=3;i<29;i++){ 
+					var img=document.createElement('img');
+					img.setAttribute('onload','plus()');
+					pre.appendChild(img);
+					img.src='imgs/bg/'+i+'.jpg';
+				}
+ 				*/
+				var ab=0;
+				charger();
+			}
+
+			function relancer(){
+				alert("La route étoilée est belle");
+				localStorage.player_level=0;
+				localStorage.special_showed=0;
+				localStorage.special_activated=0;
+				document.body.style.animation = "flouer 3s linear forwards";
+				setTimeout("location.reload();",3000);
+			}
+
+			function ending(){
+					play_sfxx('ending');
+					var cadre = document.getElementById('black');
+					var cont = document.getElementById('container');
+					cont.style.animation = "showoff 2s linear forwards";
+					cadre.style.transition="all 0.1s linear";
+					cadre.style.background='none';
+					cadre.style.zIndex=2;
+					cadre.style.transition="all 2s linear";
+					setTimeout(function(){
+					cadre.style.backgroundColor='#151515';
+					},2000);
+					setTimeout(function(){
+						cont.style.opacity=1;
+						cont.innerHTML="";
+						var simon = document.createElement('img');
+						simon.setAttribute('id','simon');
+						simon.src = 'imgs/fx/17.gif';
+						cadre.appendChild(simon);
+						var credits = document.createElement('div');
+						credits.setAttribute('id','credits');
+						credits.innerHTML = "<b>Developer</b><u>DevCBueaMonster</u><b class='music'>Mélodies de fond</b><u>Principale - Naruto ultimate Ninja Storm 3 Menu background music</u><u>Aide - Naruto OST</u><u>Ending - Code Geass OST</u><b class='gifs'>Images animées (GIF)</b><u>tumblr.com</u><u>giphy.com</u><u>tenor.com</u><b class='im'>Images statiques</b><u>deviantart.com</u><u>gallery.yopriceville.com</u><u>pngmart.com</u><u>amazon.com</u><u>WIKI Fandoms</u><b>Remerciements</b><u>Tous mes nakamas !</u>";
+						cadre.appendChild(credits);
+						credits.style.transition="opacity 2s linear";
+					},4000);
+					setTimeout(function(){
+						simon.style.animation="showoff 2s linear";
+						credits.style.animation="none";
+						credits.style.opacity=0;
+						cadre.style.animation="show_thanks 5s linear forwards,  move 20s infinite 1s linear backwards";
+					},120000);
+					setTimeout(function(){
+						var pi = document.createElement('p');
+						cadre.appendChild(pi);
+						pi.style.opacity=0;
+						pi.setAttribute('id','oko');
+						pi.innerHTML ='<span id=\'intro\'>\" Tu as fini le jeu \"</span><span id=\'result\'><img src=\'imgs/fx/thanks.gif\' align=\'left\' /><span id=\'right_side2\' style=\'padding-top:0;margin-bottom:20px;\'><span id=\'accroche\'>Du fond de mon coeur,</span><span id=\'rep\'></span></span><span><button onclick=\"play_effect(\'click\');relancer()\">Yosh!</button></span>';
+						var t = "A R I G A T O";
+						t=t.replace(/ /g,'');
+						for(i=0;i<t.length;i++){ 
+							document.getElementById('rep').innerHTML += '<b>'+t[i]+'</b>';
+						}
+						setTimeout(function(){pi.style.transition="all 0.3s linear";pi.style.marginTop =(window.innerHeight-pi.offsetHeight)/2+'px';pi.style.opacity=1;},100);
+					},125100);
+			}
+
+			function setOther(){
+				var pi = document.getElementById('oko');
+				var cadre = document.getElementById('black');
+				setTimeout(function(){pi.style.transition="all 0.3s linear";pi.style.transform="scale(0.7,0.7)";pi.style.opacity=0;},100);
+				setTimeout(function(){cadre.style.zIndex=-3;cadre.removeChild(pi);},400);
+				setTimeout(function(){
+					if((parseInt(localStorage.player_level))!=mots.length) {
+						initialiser(localStorage.player_level);
+						play_sfxx('in');
+					}
+					else {ending();}
+				},500);
+			}
+
+
+			function activate_special(elt){
+					playy_effect('ichigo');
+					play_sfxx('click');
+					var cadre = document.getElementById('black');
+					var reps = document.getElementById('reponse').childNodes;
+					var choix = document.getElementById('choix').childNodes;
+					var word = mots[localStorage.player_level].replace(/ /g,'');
+					bgControl(0);win_animate(5);
+					for(var i=0;i<choix.length;i++){
+						if(word.indexOf(choix[i].innerText)==-1) {
+							choix[i].style.transition="all 0.5s linear";
+							choix[i].style.opacity=0.2;
+							choix[i].setAttribute('onclick','');
+						}
+						else {
+							word = word.replace(choix[i].innerText,'');
+						}
+					}
+					localStorage.special_activated = 1;
+					setTimeout(function(){elt.style.opacity=0;document.getElementById('cases').removeChild(elt);cadre.style.transition="all 0.5s linear";cadre.style.zIndex=-3;bgControl(0);},1700);
+			}
+
+			if (!localStorage.special_showed) {
+			  localStorage.special_showed ='0';
+			}
+			function special_bonus(){
+				pu = document.getElementById('cases');
+				var spe = document.createElement('button');
+				spe.setAttribute('class','special');
+				spe.setAttribute('onclick','activate_special(this)');
+				if(localStorage.special_showed=='0') {spe.style.animation = 'zoom-enter 2s, struggle 1.8s 2.2s infinite';play_effect('special_arrival');setTimeout("play_sfxx('struggle')",2000);localStorage.special_showed='1';}
+				else {spe.style.animation = 'struggle 1.8s infinite';}
+				pu.appendChild(spe);
+				var cn = pu.childNodes[0];
+				spe.style.top = cn.offsetHeight-cn.offsetTop+'px';
+				spe.style.left = cn.offsetWidth-cn.offsetLeft+'px';
+			}
+			
+			function beginChapter(){
+				var cadre = document.getElementById('black');
+				var fils = document.getElementById('black').getElementsByTagName('span');
+				var ofils = document.getElementById('black').getElementsByTagName('img');
+				var p,bi;
+				setTimeout(function(){
+					play_sfx('whoosh4');
+					cadre.style.transition="all 2s linear";
+					cadre.style.transform="rotate(5deg) scale(1.8,1.8)";
+					cadre.style.filter="brightness(4)";
+					cadre.style.opacity=0;
+				},100);
+				setTimeout(function(){
+					cadre.innerHTML="";
+					cadre.style.zIndex=-3;
+					cadre.style.transform="initial";
+					cadre.style.filter="initial";
+					cadre.style.transition="all 0.3s linear";
+				},2000);
+				setTimeout(function(){
+					cadre.style.opacity=1;
+					localStorage.special_activated='0';
+					special_bonus();
+				},2300)
+			}
+
+			function score_edit(val){
+				localStorage.player_score=parseInt(localStorage.player_score)+val;
+				document.getElementById('tokens').style.animation="shine 1s";
+				document.getElementById('tokens').innerText=localStorage.player_score;
+			}
+
+			function exaucer(){
+				if(localStorage.player_score>=70){ 
+					playy_effect('shenron');
+					var pi = document.getElementById('ok');
+					var cadre = document.getElementById('black');
+					var reps = document.getElementById('reponse').childNodes;
+					var choix = document.getElementById('choix').childNodes;
+					score_edit(-70);
+					var lett="";var a;
+					for(var i=0;i<choix.length;i++){
+						if(choix[i].innerText==mots[localStorage.player_level][0]) {
+							reps[0].click();
+							for(var j=0;j<reps.length;j++){
+								if(reps[j].innerText==mots[localStorage.player_level][0]){
+									reps[j].click();
+								}
+							}
+							reps[0].setAttribute('onclick','');
+							reps[0].style.transition="all 0.4s linear";
+							reps[0].style.border="1px #219150 solid";
+							reps[0].style.background="#4cd137";
+							reps[0].style.boxShadow="inset 0px 0px 5px #219150";
+							reps[0].style.color="white";
+							a=i;
+							setTimeout(function(){var choix = document.getElementById('choix').childNodes;choix[a].click();},500);
+							i=choix.length+2;
+							first=0;
+						}
+					}
+					el = document.getElementById('shenron');
+					setTimeout(function(){el.style.transition="all 1s linear";el.style.background="#ecf0f1 url('imgs/shenron3.png') 50% 50% no-repeat";el.style.backgroundSize="70px 70px";el.style.borderColor="#bdc3c7";el.setAttribute('onclick','play_effect(\'pok\')');pi.style.transition="all 0.3s linear";pi.style.transform="scale(0.7,0.7)";pi.style.opacity=0;},100);
+					setTimeout(function(){el.style.transition="all 0.05s linear";cadre.style.zIndex=-3;cadre.removeChild(pi);bgControl(0);},400);
+				}
+				else {
+					playy_effect('tup');back_volume();
+				}
+			}
+
+
+			function sharingan(){
+				if(localStorage.player_score>=30) { 
+					playy_effect('sharingan');
+					var pi = document.getElementById('ok');
+					var cadre = document.getElementById('black');
+					var reps = document.getElementById('reponse').childNodes;
+					var choix = document.getElementById('choix').childNodes;
+					score_edit(-30);
+					var a;
+					var word = mots[localStorage.player_level].replace(/ /g,'');
+					do { 
+						var indd=Math.floor(Math.random()*word.length);
+					}while(reps[0].innerText==word[indd]);
+					for(var i=0;i<choix.length;i++){
+						if(choix[i].innerText==word[indd]) {
+							choix[i].style.transition="all 0.5s linear";
+							choix[i].style.background="#e74c3c";
+							choix[i].style.borderColor="#912c21";
+							choix[i].style.color="white";
+							a=i;
+							setTimeout(function(){choix[a].style.background="#2c3e50";choix[a].style.borderColor="#141414";},20000);
+							i=choix.length+2;
+							second=0;
+						}
+					}
+					el = document.getElementById('boule');
+					setTimeout(function(){bgControl(0);win_animate(4);el.style.transition="all 1s linear";el.style.background="#ecf0f1 url('imgs/sharingan2.png') 50% 50% no-repeat";el.style.backgroundSize="70px 70px";el.style.borderColor="#bdc3c7";el.setAttribute('onclick','play_effect(\'pok\')');pi.style.transition="all 0.3s linear";pi.style.transform="scale(0.7,0.7)";pi.style.opacity=0;},100);
+					setTimeout(function(){el.style.transition="all 0.05s linear";cadre.style.transition="all 0.5s linear";cadre.style.zIndex=-3;cadre.removeChild(pi);bgControl(0);},1700);
+				}
+				else {
+					playy_effect('tup');back_volume();
+				}
+			}
+//
+			var down=0;
+			function setTimer(){
+				var heure, minute, seconde;
+				var obj = document.getElementById('chrono');
+				setInterval(function(){
+						if(down<86400){
+							heure=Math.floor(down/3600);
+							minute=Math.floor((down%3600)/60);
+							seconde=down-(heure*3600+minute*60)
+							if(heure<10) heure='0'+heure;
+							if(minute<10) minute='0'+minute;
+							if(seconde<10) seconde='0'+seconde;
+							obj.innerHTML='<b>'+heure+' :&nbsp;</b><b>'+minute+'&nbsp;:</b><b>&nbsp;'+seconde+'</b>';
+							down++;
+						}
+					},1100);
+			}
+
+			function resize(){
+				var pi = document.getElementById('container');
+				pi.style.marginTop =(window.innerHeight-630)/2+'px';
+				pi = document.getElementById('left');
+				pi.style.marginTop =(window.innerHeight-270)/2+'px';
+				pi = document.getElementById('right');
+				pi.style.marginTop =(window.innerHeight-270)/2+'px';
+			}
+
+			function good_answer(a){
+				var cadre = document.getElementById('black');
+				var idn = Math.floor(Math.random()*14)+1;
+				var pi = document.createElement('p');
+				cadre.appendChild(pi);
+				pi.style.opacity=0;
+				play_sfxx('success_slide');
+				pi.setAttribute('id','oko');
+				pi.innerHTML ='<span id=\'intro\'>\" '+greatings[idn]+' \"</span><span id=\'result\'><img src=\'imgs/fx/'+idn+'.gif\' align=\'left\' /><span id=\'right_side2\'><span id=\'accroche\'>La réponse était bien :</span><span id=\'rep\'></span></span><span><button onclick=\"play_effect(\'click\');setOther()\">Continuer</button></span>';
+				var t = mots[a];
+				t=t.replace(/ /g,'');
+				for(i=0;i<t.length;i++){ 
+					document.getElementById('rep').innerHTML += '<b>'+t[i]+'</b>';
+				}
+				setTimeout(function(){pi.style.transition="all 0.3s linear";pi.style.marginTop =(window.innerHeight-pi.offsetHeight)/2+'px';pi.style.opacity=1;},100);
+			}
+
+			/* function saver(a,b){
+				var cadre = document.getElementById('black');
+				var pi = document.createElement('div');
+				playy_effect('migatte'); 
+				cadre.appendChild(pi);
+				bgControl(1);
+				cadre.style.zIndex=3;
+				pi.style.opacity=0;
+				if(a[0]=='S') {var method=0;}
+					else {var method=1;}
+				pi.setAttribute('id','saver');
+				pi.innerHTML +='<span class=\'title\' style=\'background:url(imgs/fx/'+b+'.png) 0% 50% no-repeat;background-size:25px 25px;\'>'+a+' un niveau</span><span id=\'code_hint\'><input type=\'text\' id=\'code\' placeholder=\"Code d\'accès au palier souhaité\" /><b>Avec ce code tu attendras un autre palier et ainsi continuer ou recommencer une partie. Mais tu te retrouveras avec plus ou moins de pièces (niveau du palier x 30 pièces, +20). Donc à toi de décider! </b></span><span><button onclick=\'charger_partie()\'>'+a+'</button><button onclick=\"annuler(1);\" style=\'background:#e74c3c;border-bottom-color:#c0392b;margin-right:5px;\'>Non !</button></span>';
+				play_effect('whoosh2');
+				setTimeout(function(){pi.style.transition="all 0.3s linear";pi.style.marginTop =(window.innerHeight-300)/2+'px';pi.style.opacity=1;},100);
+			} */
+
+			function annuler(a){
+				play_effect('click2');
+				playy_effect('no');
+				var pi;
+				if(a==1) pi = document.getElementById('oko');
+				else { pi = document.getElementById('ok');}
+				var cadre = document.getElementById('black');
+				setTimeout(function(){pi.style.transition="all 0.3s linear";pi.style.transform="scale(0.7,0.7)";pi.style.opacity=0;},100);
+				setTimeout(function(){cadre.style.zIndex=-3;if(cadre.contains(pi)) cadre.removeChild(pi);bgControl(0);back_volume();},400);
+			}
+
+			function cancel_setting(a){
+				play_effect('click2');
+				playy_effect('no');
+				var pi;
+				var imag = document.getElementById('kakashi');
+				//imag.style.transition="all 0.3s linear";
+				imag.style.opacity="0 !important";
+				if(a==0) pi = document.getElementById('saver');
+				else { pi = document.getElementById('setting');}
+				var cadre = document.getElementById('black');
+				setTimeout(function(){pi.style.transition="all 0.3s linear";pi.style.transform="scale(0.7,0.7)";pi.style.opacity=0;},100);
+				setTimeout(function(){cadre.removeChild(imag);cadre.style.zIndex=-3;cadre.removeChild(pi);bgControl(0);back_volume();},600);
+			}
+
+			function bgControl(a){
+				var bg = document.getElementById('background');
+				if(a==1){ 
+					bg.style.animationName="clouds";
+					bg.style.animationDuration="10s";
+					bg.style.animationIterationCount="infinite";
+					bg.style.zIndex=2;
+				}
+				else {
+					bg.style.animationName="example";
+					bg.style.animationDuration="250s";
+					bg.style.animationIterationCount="infinite";
+					bg.style.zIndex="-10";
+				}
+			}
+
+			function generate_box(a,b,c,d,e) {
+				if((parseInt(localStorage.player_score)>=70 && first==1)||(parseInt(localStorage.player_score)>=30 && second==1)){
+					playy_effect('ShenronTheme'); 
+					var cadre = document.getElementById('black');
+					var pi = document.createElement('p');
+					bgControl(1);
+					cadre.style.zIndex=3;
+					cadre.appendChild(pi);
+					pi.style.opacity=0;
+					pi.setAttribute('id','ok');
+					pi.innerHTML +='<span id=\'intro\' style=\'color:black;background:url(imgs/shenron.png) 5px 50% no-repeat;background-size:70px 70px;padding-left:80px;\'>I will grant you your wish</span><span id=\'result\'><img src=\'imgs/fx/'+d+'.gif\' align=\'left\' /><span id=\'right_side\'><span id=\'accroche\'>If you have gathered the necessary '+c+' points, your can express your wish.<br /> Do you whant your wish to be granted ?</span><span style=\'color:#c0392b;font-weight:bold;font-size:23;margin-top:5px;\'>" '+b+' "</span></span><span><button onclick=\"'+a+'\" style=\'background:#4cd137;border-bottom-color:#219150;\'>Yup !</button><button onclick=\"annuler(2);\" style=\'background:#e74c3c;border-bottom-color:#c0392b;margin-right:5px;\'>Nope</button></span>';
+					play_effect('whoosh2');
+					setTimeout(function(){pi.style.transition="all 0.3s linear";pi.style.marginTop =(window.innerHeight-270)/2+'px';pi.style.opacity=1;back_volume();},100);
+				}
+				else {play_effect('pok');back_volume();}
+			}
+
+			var previous_anim = 1;
+			var max_anim = 4;
+			//win_animate(5);
+			function win_animate(i_d){
+				var cadre = document.getElementById('black');
+				var sfx = document.getElementById('sfx');
+				var img1=document.createElement('img');
+				var img2=document.createElement('img');
+				var img3=document.createElement('img');
+				var img4=document.createElement('img');
+				var b;
+				cadre.style.zIndex=1;
+				cadre.appendChild(img1);
+				cadre.appendChild(img2);
+				cadre.appendChild(img3);
+				cadre.appendChild(img4);
+				img4.src="imgs/fx/light2.png";
+				img3.src="imgs/fx/light1.png";
+				img3.style="position:absolute;top:-10%;left:0%;width:100%;height:80%;opacity:0;";
+				img4.style="position:absolute;top:-5%;left:10%;width:80%;height:50%;opacity:0;";
+				do { 
+					b = Math.floor(Math.random()*max_anim);
+				}while(b==previous_anim);
+				previous_anim=b;
+				if(i_d!=undefined) b=i_d;
+				switch(b){ 
+					case 0 : sfx.src="sfx/plus-ultra.mp3";sfx.play();img1.src="imgs/fx/almight1.png";img2.src="imgs/fx/midoriya1.png";img1.style="position:absolute;top:100%;left:0%;width:1700px;height:2900px;";img2.style="position:absolute;top:100%;left:-20%;width:900px;height:1200px;";img2.style.animation="comee 2s";img1.style.animation="come 2s";break;
+					case 1 : sfx.src="sfx/roronoa.mp3";sfx.play();img2.src="imgs/fx/zoro.png";img1.src="imgs/fx/escanor.png";img2.style="position:absolute;top:100%;left:-40%;width:1500px;height:2200px;";img1.style="position:absolute;top:100%;left:70%;width:1100px;height:2400px;";img1.style.animation="slide_horizontall 2s";img2.style.animation="slide_horizontal 2s";break;
+					case 2 : sfx.src="sfx/ara-ara.mp3";sfx.play();img1.src="imgs/fx/hinata.png";img2.src="imgs/fx/02.png";img1.style="position:absolute;top:100%;left:-30%;width:1200px;height:1800px;";img2.style="position:absolute;top:100%;left:70%;width:950px;height:1400px;";img2.style.animationName="updownn";img2.style.animationDuration="2s";img1.style.animationName="updown";img1.style.animationDuration="2s";break;
+					case 3 : sfx.src="sfx/yooo.mp3";sfx.play();img1.src="imgs/fx/naruke.png";img1.style="position:absolute;top:70%;left:20%;width:600px;height:1000px;";img1.style.animation="up 2s";break;
+					case 4 : cadre.removeChild(img3);cadre.removeChild(img4);img1.src="imgs/fx/itachi.png";img1.style="position:absolute;top:100%;left:15%;width:700px;height:900px;";img1.style.animation="sharingan 3s";break;
+					case 5 : cadre.removeChild(img3);cadre.removeChild(img4);img1.src="imgs/fx/ichigo.png";img1.style="position:absolute;left:15%;width:750px;height:900px;top:50%;";img1.style.animation="ichigo 3s";break;
+				}
+
+				img3.style.animation="light 2.8s";
+				img4.style.animation="lightt 2.8s";
+				
+				setTimeout(function(){img1.style.transition="all 1s linear";img2.style.transition="all 1s linear";img1.style.opacity=0;img2.style.opacity=0;},1400);
+				setTimeout(function(){
+					if(cadre.contains(img1)) cadre.removeChild(img1);
+					if(cadre.contains(img2)) cadre.removeChild(img2);
+					if(cadre.contains(img3)) cadre.removeChild(img3);
+					if(cadre.contains(img4)) cadre.removeChild(img4);
+				},3000);
+			}
+
+			var img_chapitres = new Array("dio","aizen","seiya","lelouch");
+			var ground_chapitres = new Array("ground1","ground2","ground4","ground3");
+			var titre_chapitres = new Array("Bienvenue !","Toi encore ?","Qu'Athena te protège","Abandonne !");
+			var txt_chapitres = new Array("Voyons si tu es prêt à t'engager sur cette route!<br/>Le principe est simple : trouve le mot qui lie les 4 images.<br/> Je n'en dirais pas plus, sinon de cliquer sur l'icône d'informations en haut à droite quand tu seras prêt à te lancer... FAIS-LE AVANT TOUT!","Je crois que nous allons nous amuser d'avantage","Ta route sera semée d'encore plus d'ambuches. Bats-toi toujours plus !","Que notre véritable affrontement commence ! J'attends beaucoup de toi, ne me déçois pas.");
+			function new_chapter(a){
+				var cadre = document.getElementById('black');
+				var sfx = document.getElementById('sfx');
+				var img1=document.createElement('span');
+				var img2=document.createElement('span');
+				var message=document.createElement('span');
+				var img3=document.createElement('img');
+				var img4=document.createElement('img');
+				message.id="message";
+				message.innerHTML = "<b>"+txt_chapitres[a]+"</b><button onclick='beginChapter()'>Okay!</button>";
+				img1.setAttribute('class','num_chapitre');
+				img1.innerText = "CHAPITRE "+parseInt(a+1);
+				img2.setAttribute('class','titre_chapitre');
+				img2.innerText = titre_chapitres[a];
+				cadre.style.zIndex=1;
+				img4.src="imgs/fx/"+img_chapitres[a]+".png";
+				img3.src="imgs/fx/"+ground_chapitres[a]+".png";
+				img4.style="position:absolute;bottom:-100%;right:-20%;width:100%;height:100%;animation:grap2 0.8s forwards 0.3s, flotter 4s infinite 0.8s linear backwards;";
+				img3.style="position:absolute;bottom:-20%;width:110%;height:20%;animation:grap 0.8s forwards,roter 5s infinite 0.8s linear backwards;";
+				playy_effect('snare');
+				play_effect('orchestra');
+				back_volume();
+				cadre.appendChild(img1);
+				cadre.appendChild(img2);
+				cadre.appendChild(img3);
+				cadre.appendChild(img4);
+				cadre.appendChild(message);
+				
+				/*setTimeout(function(){img1.style.transition="all 1s linear";img2.style.transition="all 1s linear";img1.style.opacity=0;img2.style.opacity=0;},1400);
+				setTimeout(function(){cadre.removeChild(img1);cadre.removeChild(img2);cadre.removeChild(img3);cadre.removeChild(img4);},3000);*/
+			}
+
+			// TOUS LES EASTER EGGS ICI !
+
+
+			var cheats = [0,0,0,0,0,0,0,0];
+			function check_cheat(elt){
+				var pl = parseInt(localStorage.player_level)+1;
+				// Conditions du cheat
+				if(pl==1 && elt.getAttribute("src") == "imgs/14.jpg") {cheats[0]++;}
+				if(pl==6 && elt.getAttribute("src") == "imgs/110.jpg") cheats[1]++;
+				if(pl==14 && elt.getAttribute("src") == "imgs/20.jpg") cheats[2]++;
+				if(pl==41 && elt.getAttribute("src") == "imgs/56.jpg") cheats[3]++;
+				if(pl==75 && elt.getAttribute("src") == "imgs/141.jpg") cheats[4]++;
+
+				// Activation du cheat avec pl=niveau_affiché et le niveau à charger -1
+				if(pl==1 && cheats[0]==4) {
+					localStorage.player_level = 5;
+					initialiser(5);
+					cheats[0] = 0;
+				}
+				if(pl==6 && cheats[1]==7) {
+					localStorage.player_level = 13;
+					initialiser(13);
+					cheats[1] = 0;
+				}
+				if(pl==14 && cheats[2]==3) {
+					localStorage.player_level = 40;
+					initialiser(40);
+					cheats[2] = 0;
+				}
+				if(pl==41 && cheats[3]==5) {
+					localStorage.player_level = 74;
+					initialiser(74);
+					cheats[3] = 0;
+				}
+				if(pl==75 && cheats[4]==11) {
+					localStorage.player_level = 98;
+					initialiser(98);
+					cheats[4] = 0;
+				}
+			}
+
+			//new_chapter(1);
+			var widt = "40px 40px"
+			function initialiser(index){
+				if(((parseInt(localStorage.player_level)+1)%25)==0 && (parseInt(localStorage.player_level)+1)<mots.length) new_chapter((parseInt(localStorage.player_level)+1)/25);
+				if(localStorage.player_level=='0') new_chapter(0);
+				first = 1;
+				second = 1;
+				saori_cpt = 0;
+				// Déclaation des blocs
+				var bloc = document.getElementById('container');
+				bloc.style.opacity=1;
+				var board = document.getElementById('dashboard');
+				document.getElementById('boule').setAttribute('class','hint');
+				setTimeout(function(){document.getElementById('boule').style.transition="all 0.05s linear";},300);
+				document.getElementById('boule').style.background="#4cd137 url('imgs/sharingan.png') 50% 60% no-repeat";
+				document.getElementById('shenron').style.background="#4cd137 url('imgs/shenron2.png') 50% 60% no-repeat";
+				document.getElementById('boule').style.backgroundSize=widt;
+				document.getElementById('shenron').style.backgroundSize=widt;
+				document.getElementById('shenron').style.borderColor="#219150";
+				document.getElementById('boule').style.borderColor="#219150";
+				document.getElementById('boule').setAttribute('onclick',"generate_box(\'sharingan()\',\'Reveal to me a letter appearing in the word\',30,\'hint\',\'sharingan\')");
+				document.getElementById('shenron').setAttribute('onclick',"generate_box(\'exaucer()\',\'Reveal to me the first letter of the word\',70,\'shenron\',\'shenron\')");
+
+				// Chargement des images
+				var i=0, a=0;
+				var t = imgs[index];
+				var img = t.split(',');
+
+				// Reset
+				bloc.innerHTML='';
+				bloc.appendChild(board);
+
+				// Bloc Score
+				var show_lvl = parseInt(parseInt(index)+1);
+				document.getElementById('level').innerText=show_lvl;
+				document.getElementById('tokens').innerText=localStorage.player_score;
+
+				pu = document.createElement('p');
+				pu.setAttribute('id','cases');
+				var img_html = "";
+				for(i=0;i<4;i++){
+					var img_alea=Math.floor(Math.random()*img.length);
+					img_html += '<img onclick=\"check_cheat(this)\" src=\'imgs/'+img[img_alea]+'.jpg\' />';
+					img.splice(img_alea,1);
+				}
+				pu.innerHTML += img_html;
+				pu.style.opacity=0;
+				var spe = document.createElement('button');
+
+				bloc.appendChild(pu);
+				pu.style.transition="all 0.3s linear";
+				if(localStorage.special_activated=='0' && localStorage.special_showed=='1') special_bonus();
+				setTimeout(function(){pu.style.opacity=1;},100);
+
+				// Taille du mot à trouver et affichage
+				var t = mots[index];
+				t=t.replace(/ /g,'');
+				var pa = document.createElement('p');
+				pa.setAttribute('id','reponse');
+				var reponse = document.getElementById('reponse');
+				for(i=0;i<t.length;i++){
+					pa.innerHTML+='<b onclick=\"play_effect(\'tup\');backLetter(this)\"></b>';
+				}
+				pa.style.opacity=0;
+				bloc.appendChild(pa);
+				pa.style.transition="all 0.3s linear";
+				setTimeout(function(){pa.style.opacity=1;},400);
+
+				// Disposition des lettres
+				var lettres = letters.split(' ');
+				po = document.createElement('p');
+				po.setAttribute('id','choix');
+				reponse = document.getElementById('choix');
+				var word = mots[index].split(' ');
+				var g = word.length;
+				var h=0, t=0, b=0;
+				for(i=0;i<12;i++){
+					h = Math.floor(Math.random()*2);
+					if(h==0 && t<12-g){
+						var ind = Math.floor(Math.random()*lettres.length);
+						po.innerHTML += '<b onclick=\"play_effect(\'click\');setLetter(this)\" class=\'a\' id=\''+lettres[i]+'\'>'+lettres[ind].toUpperCase()+'</b>';
+						t++;
+					}
+					else if((h!=0 && b<g) || (t>=12-g)) { 
+						var ind=Math.floor(Math.random()*word.length);
+						po.innerHTML += '<b onclick=\"play_effect(\'click\');setLetter(this)\" class=\'a\' id=\''+lettres[i]+'\'>'+word[ind]+'</b>';
+						word.splice(ind,1);
+						b++;
+					}
+					else {
+						var ind = Math.floor(Math.random()*lettres.length);
+						po.innerHTML += '<b onclick=\"play_effect(\'click\');setLetter(this)\" class=\'a\' id=\''+lettres[i]+'\'>'+lettres[ind].toUpperCase()+'</b>';
+					}
+				}
+				po.style.opacity=0;
+				bloc.appendChild(po);
+				po.style.transition="all 0.3s linear";
+				setTimeout(function(){po.style.opacity=1;},700);
+			}
+
+
+			if(!localStorage.saori_level) localStorage.saori_level = 0;
+
+			function check_word(){
+				var reponse = document.getElementById('reponse').childNodes;
+				var rep = document.getElementById('reponse');
+				var mot="";
+				var a=0
+				for(i=0;i<reponse.length;i++){
+					mot+=reponse[i].innerText;
+				}
+
+				if(mot=="SAORI" && (localStorage.saori_level!=parseInt(localStorage.player_level)+1) && Math.floor(Math.random()*4)==1){
+					localStorage.saori_level=parseInt(localStorage.player_level)+1;
+					var ath=document.createElement('img');
+					ath.src="imgs/fx/athena.png";
+					playy_effect('athena');
+					back_volume();
+					ath.style="position:absolute;width:700px;height:900px;left:20%;top:90%;opacity:0;";
+					ath.style.animation="saori 3s backwards";
+					document.getElementById('container').appendChild(ath);
+					setTimeout(function(){document.getElementById('container').removeChild(ath);play_effect('in');score_edit(100);},3000);
+				}
+				real_word = mots[localStorage.player_level].replace(/ /g,'');
+				if(mot==real_word){
+					localStorage.player_level = parseInt(localStorage.player_level)+1;
+					win_animate();
+					setTimeout("good_answer(localStorage.player_level-1);",2000);
+					localStorage.player_score=parseInt(localStorage.player_score)+10;
+				}
+				if(mot.length==real_word.length && mot!=real_word){
+					rep.style.animation="giggle 0.79s forwards";
+					if(Math.floor(Math.random()*20)==2){
+						var ori=document.createElement('img');
+						if(Math.floor(Math.random()*2)==0) ori.src="imgs/fx/orihime.png";
+						else {ori.src="imgs/fx/lucy.png";}
+						playy_effect('ganbatte');
+						back_volume();
+						ori.style="position:absolute;width:700px;height:900px;top:90%;left:20%;opacity:0;";
+						ori.style.animation="orihime 1.5s backwards";
+						document.getElementById('container').appendChild(ori);
+						setTimeout(function(){document.getElementById('container').removeChild(ori);play_effect('in');score_edit(10);back_volume();},1500);
+					}
+					if(reponse[0].style.color == "white") {a=1;}
+					for(i=a;i<reponse.length;i++){
+						reponse[i].style.transition="all 0.2s linear";
+						reponse[i].style.color="#c0392b";
+						play_sfxx('wrong');
+						echecs++;
+						var echec_alea;
+						if(Math.floor(Math.random()*2)==1) {
+							echecs=0;
+							//alert('test');
+						}
+					}
+					setTimeout(function(){
+						rep.style.animationName="";
+						for(i=a;i<reponse.length;i++){
+							reponse[i].style.transition="all 0.2s linear";
+							reponse[i].style.color="black";
+						}
+					},800);
+				}
+			}
+
+			function check_blank(){
+				var reponse = document.getElementById('reponse').childNodes;
+				var inn = reponse.length;
+				for(i=0;i<reponse.length;i++){
+					if(reponse[i].innerHTML=="") {inn=i;i=reponse.length+5;}
+				}
+				return inn;
+			}
+
+			function setLetter(elt){
+				var reponse = document.getElementById('reponse').childNodes;
+				var letter = elt.innerText;
+				var indice_reponse = check_blank();
+				var indn = reponse.length;
+				if(indice_reponse<indn){ 
+					reponse[indice_reponse].innerText=letter;
+					reponse[indice_reponse].setAttribute('id',elt.id+''+elt.id);
+					elt.setAttribute('class','b');
+					elt.setAttribute('onclick','');
+					check_word();
+				}
+			}
+
+			function backLetter(elt){
+				if(elt.innerText != ""){ 
+					elt.innerText="";
+					var choix = document.getElementById(elt.id.charAt(0));
+					choix.setAttribute('onclick','setLetter(this);play_effect(\'click\')');
+					choix.setAttribute('class','a');
+				}
+			}
+
+			var echecs = 0;
+			/* function charger_partie(){
+				var code = document.getElementById('code').value;
+				var inputt = document.getElementById('code');
+				var a=0, b=0;
+				if(code != ''){ 
+					for(var i=0;i<codes.length;i++){
+						if(code==codes[i]) {
+							if(i==0) b=9;
+							else {b=((i+1)*10)-1;}
+							initialiser(b);
+							index = b;
+							score = ((i+1)*30)+20;
+							a=1;
+							document.getElementById('tokens').innerText = score; 
+							annuler(1);
+							i= codes.length+2;
+						}
+					}
+					if(a==0) {
+						echecs++;
+						inputt.style.border="2px #c0392b solid";
+					}
+					if(echecs>3) {
+						document.getElementById('chargeur').style.display="none";
+						annuler(1);
+					}
+				}
+			} */
+
+			function add_bonus(){
+				var code = document.getElementById('code_bonus').value;
+				for(var i=0;i<bonus.length;i++){
+					if(code==bonus[i]) {
+						switch(i){
+							case 0 : score+=15;document.getElementById('tokens').innerText=score;break;
+							case 1 : score+=20;document.getElementById('tokens').innerText=score;break;
+						}
+						play_effect('in');
+						bonus.splice(i,1);
+					}
+				}
+			}
+
+			//set_setting();
+			function set_setting(){
+				playy_effect('cool'); 
+					var cadre = document.getElementById('black');
+					var pi = document.createElement('p');
+					var imag = document.createElement('img');
+					imag.src = "imgs/fx/kakashi.png";
+					imag.setAttribute('id','kakashi');
+					bgControl(1);
+					cadre.style.zIndex=3;
+					cadre.appendChild(pi);
+					cadre.appendChild(imag);
+					pi.style.opacity=0;
+					pi.setAttribute('id','setting');
+					pi.innerHTML ="<span class='bande'>Otaku Academy</span><span id='supconseil'><span id='conseil'><img src='imgs/fx/kakashi.gif' align='left' /><span id='ennonce'><b>Advice 1 : Be motivated !</b><br/><br/> The answer (word to find) can be <u>anything!</u> May it be the name of a manga (complete or partial), a character, a french word (like \"Voleur\",\"Manger\",ou \"DevCBueaMonster\" <i>XD Actually kidding on the last one</i>) or a japanese name transpiled in french or english (like \"DIEU\" in french that can be traduced in \"kami\"). All depends on <u>your feeling</u>; I you got an idea just try it out !</span></span><span id='conseil'><img src='imgs/fx/saitama.gif' align='left' /><span id='ennonce'><b>Advice 2 : Don't be afraid to get some help !</b><br/><br/> Même pour SAITAMA tout n'est pas toujours facile, souviens-t'en! Et dans ce cas tu peux recourir from Shenron or from Itachi (Yup bro!) just by tapping one of the green buttons at the top right. If you got the 7 dragon balls, one of them shall grant one of your wishes. Forget de dragon balls. You gotta have enough points instead <u>for them to help you</u>... <i>It may have been cooler with dragon balls, i know.</i></span></span><span id='conseil'><img src='imgs/fx/kaneki.gif' align='left' /><span id='ennonce'><b>Advice 3 : Hey you're not alone </ b> <br/> <br/> Whether it's Saori for Seiya, Lucy for Natsu, or Orihime for Ichigo, the majority of our manga heroes have comrades they can to count, so why not you? They are there, with you, and will help you openly (at each new chapter) or discreetly ...<u> Just trust</u>... <i>They will be up to your expectations.</i></span></span><span id='conseil'><img src='imgs/fx/dance.gif' align='left' /><span id='ennonce'><b>Advice 4 : Use your points well! </ b> <br/> <br/> As mentioned above, the points will allow you to resort to bonuses allowing you to find the words more easily. But each bonus is different and does not have the same power. So be careful! But you should also know that you earn 10 points per word found and 15 points of <u> Super Bonus </ u> automatically thanks to the advertisements you see every 4 words found (<i> especially that it also helps me to make ends meet</i>)</span></span><span id='conseil'><img src='imgs/fx/vrai.gif' align='left' /><span id='ennonce'><b>Advice 5 : Stay strong !</b><br/><br/> Yes! Stay strong, <u> fair play </u>, true, like Shiryu from DRAGON! Play normally! You can try to hack the application to have everything you want. It will not be very difficult (I am not an expert in apps security). But, if you took pleasure in finding the words after having thought about yourself, what would it be like to cheat? Ask yourself this question today and your answer may serve you later</span></span><span id='conseil'><img src='imgs/fx/thanks.gif' align='left' /><span id='ennonce'><b>The last word (and info note)</b><br/><br/> First, <u> Thank you!</u> Thank you for playing or just looking at the app. Do not hesitate to note it to the level of your satisfaction and to show it to a close one! <br/> For the note of infos, I mean that I am the author of no image in this application. If you do not want one of your works to appear here, please let me know directly. You will be able to find me by the pseudo - <u>MightyFake</u> if you dig a little!</span></span></span><span class='bottom'><button onclick='cancel_setting(1);' style='background:#e74c3c;border-bottom-color:#c0392b;margin-right:5px;'>Got it !</button></span>";
+					play_effect('whoosh2');
+					setTimeout(function(){pi.style.transition="all 0.3s linear";pi.style.marginTop =(window.innerHeight-pi.offsetHeight)/2+'px';pi.style.opacity=1;},100);
+			}
+			/* @keyframes example {
+			  0%   {background:url('imgs/bg/3.jpg') no-repeat;background-size:cover;}
+			  4%  {background:url('imgs/bg/4.jpg') no-repeat;}
+			  8%  {background:url('imgs/bg/5.jpg') no-repeat;}
+			  12% {background:url('imgs/bg/6.jpg') no-repeat;}
+			  16%   {background:url('imgs/bg/7.jpg') no-repeat;}
+			  20%  {background:url('imgs/bg/8.jpg') no-repeat;}
+			  24%  {background:url('imgs/bg/9.jpg') no-repeat;}
+			  28% {background:url('imgs/bg/10.jpg') no-repeat;}
+			  32%   {background:url('imgs/bg/11.jpg') no-repeat;}
+			  36%  {background:url('imgs/bg/12.jpg') no-repeat;}
+			  40%  {background:url('imgs/bg/13.jpg') no-repeat;}
+			  44% {background:url('imgs/bg/14.jpg') no-repeat;}
+			  48%   {background:url('imgs/bg/15.jpg') no-repeat;}
+			  52%  {background:url('imgs/bg/16.jpg') no-repeat;}
+			  56%  {background:url('imgs/bg/17.jpg') no-repeat;}
+			  60% {background:url('imgs/bg/18.jpg') no-repeat;}
+			  64%   {background:url('imgs/bg/19.jpg') no-repeat;}
+			  68%  {background:url('imgs/bg/20.jpg') no-repeat;}
+			  72%  {background:url('imgs/bg/21.jpg') no-repeat;}
+			  76%  {background:url('imgs/bg/22.jpg') no-repeat;}
+			  80%  {background:url('imgs/bg/23.jpg') no-repeat;}
+			  84%  {background:url('imgs/bg/24.jpg') no-repeat;}
+			  88%  {background:url('imgs/bg/25.jpg') no-repeat;}
+			  92%  {background:url('imgs/bg/26.jpg') no-repeat;}
+			  96%  {background:url('imgs/bg/27.jpg') no-repeat;}
+			  100% {background:url('imgs/bg/28.jpg') no-repeat;}
+			} */
+		</script>
+	</body>
+
+</html>
